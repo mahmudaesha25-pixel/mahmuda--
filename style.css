@@ -1,225 +1,177 @@
-#bgCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-:root {
-    --bg: #0b0f14;
-    --accent: #00ffaa;
-    --text: #eaeaea;
-}
+/* =======================
+   RESET & VARIABLES
+======================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Code Pro', monospace;
 }
 
+:root {
+    --bg-overlay: rgba(11, 15, 20, 0.92);
+
+    --card-bg: rgba(20, 20, 40, 0.72);   /* ✅ SAME FOR ALL CARDS */
+    --card-border: rgba(182, 168, 255, 0.35);
+    --card-glow: rgba(182, 168, 255, 0.18);
+
+    --text: #eae6ff;
+    --muted: #9ca3af;
+    --accent: #6cf2ff;
+}
+
+/* =======================
+   BODY & BACKGROUND
+======================= */
+
 body {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--text);
     background:
-        linear-gradient(rgba(11,15,20,0.92), rgba(11,15,20,0.92)),
+        linear-gradient(var(--bg-overlay), var(--bg-overlay)),
         url("assets/images/pixel.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: var(--text);
 }
 
-
-section {
-    padding: 100px 10%;
-    scroll-margin-top: 100px;
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 }
 
-h1 {
-    font-size: 3rem;
+/* =======================
+   TYPOGRAPHY
+======================= */
+
+h1, h2, h3 {
     font-family: 'VT323', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-h2 {
-    margin-bottom: 20px;
-    font-family: 'VT323', monospace;
+h1 { font-size: 44px; }
+h2 { font-size: 30px; margin-bottom: 25px; }
+h3 { font-size: 20px; margin-bottom: 10px; }
+
+.subtitle {
+    color: var(--muted);
+    margin: 12px 0 25px;
+    max-width: 800px;
 }
 
-.glass {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px;
-}
+/* =======================
+   NAVIGATION
+======================= */
 
 .top-nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0,0,0,0.6);
-    padding: 15px 10%;
+    padding: 18px 10%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background: rgba(10,10,20,0.6);
+    backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
-.nav-links a {
-    margin-left: 20px;
+.top-nav a {
+    margin-left: 22px;
     color: var(--text);
     text-decoration: none;
+    font-weight: 600;
 }
 
-.subtitle {
-    margin: 15px 0;
-    opacity: 0.8;
-}
-
-.social-icons a {
-    font-size: 1.4rem;
-    margin: 0 10px;
+.top-nav a:hover {
     color: var(--accent);
 }
 
-.hire-btn, .cert-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: var(--accent);
-    color: #000;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+html {
+    scroll-behavior: smooth;
 }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+/* =======================
+   LAYOUT
+======================= */
+
+main {
+    padding: 140px 10% 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
 }
 
-.card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+.section {
+    scroll-margin-top: 120px; /* ✅ scroll starts at card */
+}
+
+/* =======================
+   GLOBAL CARD STYLE (IMPORTANT)
+======================= */
+
+.section-card,
+.project-card,
+.cert-card,
+.resume-block {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
     border-radius: 16px;
-    padding: 20px;
+    padding: 40px;
+    box-shadow: 0 0 28px var(--card-glow);
     transition: 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 0 20px rgba(0,255,170,0.3);
+.section-card:hover,
+.project-card:hover,
+.cert-card:hover,
+.resume-block:hover {
+    transform: translateY(-4px);
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
+/* =======================
+   HOME (NO CARD)
+======================= */
 
-.keyword-tags span {
-    display: inline-block;
-    background: rgba(0,255,170,0.15);
+#hero .status {
     color: var(--accent);
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 6px;
-    font-size: 0.85rem;
+    margin-bottom: 12px;
 }
+
 .contact-icons {
     display: flex;
     gap: 26px;
     font-size: 26px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .contact-icons a {
-    color: var(--primary);
+    color: var(--text);
     transition: 0.3s ease;
 }
 
 .contact-icons a:hover {
     color: var(--accent);
-    transform: scale(1.25);
+    transform: scale(1.2);
 }
 
-.location {
-    margin-top: 10px;
-    color: var(--secondary);
-}
+/* =======================
+   ABOUT
+======================= */
 
-.hire-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 22px;
-    border: 2px solid var(--accent);
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
-
-.hire-btn:hover {
-    background: var(--accent);
-    color: #0b0f14;
-    box-shadow: 0 0 14px var(--accent);
-}
-.project-card {
-    background: rgba(20, 20, 40, 0.75);
-    border: 1px solid rgba(182,168,255,0.4);
-    border-radius: 14px;
-    padding: 22px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.project-card h3 {
-    font-size: 20px;
-    color: var(--primary);
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 18px rgba(182,168,255,0.25);
-}
-
-/* hidden by default */
-.project-content {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
-}
-
-/* expanded */
-.project-card.active .project-content {
-    max-height: 600px;
-    opacity: 1;
-}
-
-.project-content img {
-    max-width: 420px;
-    border-radius: 10px;
-    border: 1px solid rgba(182,168,255,0.3);
-}
-
-.section-card {
-    background: rgba(20,20,40,0.75);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(182,168,255,0.35);
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 0 25px rgba(182,168,255,0.15);
+.about-text {
+    max-width: 850px;
+    line-height: 1.7;
 }
 
 .about-grid {
+    margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
-    margin-top: 30px;
 }
 
 .keyword-tags {
@@ -230,16 +182,127 @@ h2 {
 }
 
 .keyword-tags span {
-    padding: 6px 14px;
     border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 14px;
     border-radius: 20px;
     font-size: 13px;
-    color: var(--accent);
 }
 
-.contact-email {
+/* =======================
+   PROJECTS
+======================= */
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.project-card {
+    cursor: pointer;
+}
+
+.project-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.project-card.active .project-content {
+    max-height: 600px;
+    opacity: 1;
+}
+
+.project-content img {
+    max-width: 420px;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+}
+
+/* =======================
+   CERTIFICATIONS
+======================= */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.cert-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    cursor: zoom-in;
+}
+
+/* =======================
+   RESUME
+======================= */
+
+.resume-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.resume-btn {
+    display: inline-block;
     margin-top: 15px;
-    font-size: 15px;
-    color: var(--secondary);
+    padding: 12px 22px;
+    border: 2px solid var(--accent);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 10px;
 }
 
+.resume-btn:hover {
+    background: var(--accent);
+    color: #0b0f14;
+}
+
+/* =======================
+   CONTACT
+======================= */
+
+.contact-email,
+.location {
+    margin-top: 12px;
+    color: var(--muted);
+}
+
+.hire-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    border: 2px solid var(--accent);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.hire-btn:hover {
+    background: var(--accent);
+    color: #0b0f14;
+}
+
+/* =======================
+   MOBILE
+======================= */
+
+@media (max-width: 768px) {
+    main {
+        padding: 120px 6% 80px;
+    }
+
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+}
