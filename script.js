@@ -57,3 +57,8 @@ document.querySelectorAll('.cert-lightbox').forEach(link => {
         o.onclick = () => o.remove();
     };
 });
+
+window.onload = () => {
+    window.scrollTo(0, 0);
+};
+
