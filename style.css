@@ -116,7 +116,8 @@ main {
 .project-card, 
 .cert-card, 
 .resume-block { 
-   background: var(--card-bg); 
+  /* background: var(--card-bg); */
+   background: rgba(20, 20, 40, 0.35);
    backdrop-filter: blur(8px); 
    border: 1px solid var(--card-border); 
    border-radius: 16px; padding: 40px; 
