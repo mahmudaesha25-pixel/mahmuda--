@@ -110,13 +110,13 @@ main {
 
 /* =======================
    GLOBAL CARD STYLE (IMPORTANT)
-======================= 
+======================= */
 
 .section-card, 
 .project-card, 
 .cert-card, 
 .resume-block { 
-  /* background: var(--card-bg); 
+  /* background: var(--card-bg); */
    background: rgba(20, 20, 40, 0.35);
    backdrop-filter: blur(8px); 
    border: 1px solid var(--card-border); 
@@ -124,26 +124,6 @@ main {
    box-shadow: 0 0 22px var(--card-glow); 
    transition: 0.3s ease; 
 }
-*/
-.section-card,
-.project-card,
-.cert-card,
-.resume-block {
-  background: rgba(20, 20, 40, 0.22); /* more transparent */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-
-  border: 1px solid rgba(160, 180, 255, 0.45);
-  border-radius: 16px;
-  padding: 40px;
-
-  box-shadow:
-    0 0 35px rgba(120, 140, 255, 0.35),
-    inset 0 0 25px rgba(255, 255, 255, 0.08);
-
-  transition: 0.3s ease;
-}
-
 
 
 .section-card:hover,
