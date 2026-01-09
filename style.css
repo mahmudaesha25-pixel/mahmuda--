@@ -116,14 +116,15 @@ main {
 .project-card,
 .cert-card,
 .resume-block {
-    background: var(--card-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--card-border);
+    background: rgba(255, 255, 255, 0.3); /* lighter and more transparent */
+    backdrop-filter: blur(5px);           /* optional: less blur */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     padding: 40px;
-    box-shadow: 0 0 28px var(--card-glow);
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
 }
+
 
 .section-card:hover,
 .project-card:hover,
@@ -295,16 +296,6 @@ main {
 }
 
 
-/* FINAL CARD OPACITY — MORE TRANSPARENT */
-.section-card,
-.project-card,
-.cert-card,
-.resume-block {
-    background: rgba(20, 20, 40, 0.45);   /* 🔥 LOWER = MORE TRANSPARENT */
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(182,168,255,0.3);
-    box-shadow: 0 0 22px rgba(182,168,255,0.12);
-}
 
 /* =======================
    MOBILE
