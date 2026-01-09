@@ -294,6 +294,18 @@ main {
     color: #0b0f14;
 }
 
+
+/* FINAL CARD OPACITY — MORE TRANSPARENT */
+.section-card,
+.project-card,
+.cert-card,
+.resume-block {
+    background: rgba(20, 20, 40, 0.45);   /* 🔥 LOWER = MORE TRANSPARENT */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(182,168,255,0.3);
+    box-shadow: 0 0 22px rgba(182,168,255,0.12);
+}
+
 /* =======================
    MOBILE
 ======================= */
