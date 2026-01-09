@@ -101,23 +101,43 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="section">
+  <div class="section-card">
     <h2>Projects</h2>
 
-    <div class="card-grid">
-        <div class="card">
-            <img src="assets/images/project1.png">
-            <h3>Gesture Controlled Robot</h3>
-            <p>IoT-based robot controlled using hand gestures.</p>
-        </div>
+    <div class="project-list">
 
-        <div class="card">
-            <img src="assets/images/project2.png">
-            <h3>Network Optimization Tool</h3>
-            <p>Java-based MST algorithm implementation.</p>
+      <div class="project-card" onclick="toggleProject(this)">
+        <h3>Hand Gesture Controlled Robot</h3>
+
+        <div class="project-content">
+          <p>
+            A gesture-controlled robotic system using ADXL345 accelerometer
+            and NRF24L01 RF modules. Hand movements are translated into motion
+            commands, processed via Arduino Nano, and executed using L298N
+            motor drivers.
+          </p>
+
+          <img src="assets/images/gesture-robot.png" alt="Gesture Robot">
         </div>
+      </div>
+
+      <div class="project-card" onclick="toggleProject(this)">
+        <h3>Network Cable Optimizer</h3>
+
+        <div class="project-content">
+          <p>
+            Java Swing application implementing Minimum Spanning Tree (MST)
+            algorithms to minimize network cabling cost. Includes save/load
+            functionality and JSON export.
+          </p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
+
 
 <!-- CERTIFICATIONS -->
 <section id="certs">
@@ -143,13 +163,37 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="glass">
+<section id="contact" class="section">
+  <div class="section-card">
     <h2>Contact</h2>
-    <p>Email: pentester.mahmuda@gmail.com</p>
-    <p>Location: Dhaka, Bangladesh</p>
+    <p class="location">📍 Dhaka, Bangladesh</p>
+      
+    <div class="contact-icons">
+      <a href="https://github.com/mahmuda-binte-kabir" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
 
-    <a href="mailto:pentester.mahmuda@gmail.com" class="hire-btn">Hire Me</a>
+      <a href="https://www.linkedin.com/in/mahmuda-binte-kabir" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="https://twitter.com/Mahmuda_BK" target="_blank">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+
+      <a href="https://codeforces.com/profile/_MBK_" target="_blank">
+        <i class="fas fa-code"></i>
+      </a>
+    </div>
+
+    
+
+    <a class="hire-btn" href="mailto:pentester.mahmuda@gmail.com">
+      Hire Me
+    </a>
+  </div>
 </section>
+
 
 </main>
 
