@@ -124,3 +124,84 @@ h2 {
     border-radius: 6px;
     font-size: 0.85rem;
 }
+.contact-icons {
+    display: flex;
+    gap: 26px;
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+.contact-icons a {
+    color: var(--primary);
+    transition: 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: var(--accent);
+    transform: scale(1.25);
+}
+
+.location {
+    margin-top: 10px;
+    color: var(--secondary);
+}
+
+.hire-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    border: 2px solid var(--accent);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.hire-btn:hover {
+    background: var(--accent);
+    color: #0b0f14;
+    box-shadow: 0 0 14px var(--accent);
+}
+.project-card {
+    background: rgba(20, 20, 40, 0.75);
+    border: 1px solid rgba(182,168,255,0.4);
+    border-radius: 14px;
+    padding: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgba(182,168,255,0.25);
+}
+
+/* hidden by default */
+.project-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* expanded */
+.project-card.active .project-content {
+    max-height: 600px;
+    opacity: 1;
+}
+
+.project-content img {
+    max-width: 420px;
+    border-radius: 10px;
+    border: 1px solid rgba(182,168,255,0.3);
+}
