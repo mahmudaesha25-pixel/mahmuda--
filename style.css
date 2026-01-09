@@ -205,3 +205,41 @@ h2 {
     border-radius: 10px;
     border: 1px solid rgba(182,168,255,0.3);
 }
+
+.section-card {
+    background: rgba(20,20,40,0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(182,168,255,0.35);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 0 25px rgba(182,168,255,0.15);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.keyword-tags {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.keyword-tags span {
+    padding: 6px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--accent);
+}
+
+.contact-email {
+    margin-top: 15px;
+    font-size: 15px;
+    color: var(--secondary);
+}
+
