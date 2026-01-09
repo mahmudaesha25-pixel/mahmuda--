@@ -185,3 +185,26 @@ footer {
         padding: 120px 5%;
     }
 }
+/* Hire Me button */
+.hire-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background: var(--accent);
+    color: #0b0f14;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.hire-btn:hover {
+    background: var(--secondary);
+    color: #0b0f14;
+    box-shadow: 0 0 12px var(--accent);
+}
+
+/* CTA container */
+.cta-buttons {
+    margin-top: 25px;
+}
