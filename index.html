@@ -2,30 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mahmuda | Cybersecurity Portfolio</title>
+    <title>Mahmuda | Offensive Security Portfolio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<canvas id="bgCanvas"></canvas>
-
-<!-- NAV -->
 <nav class="top-nav">
     <span class="logo">MBK</span>
     <div class="nav-links">
         <a href="#hero">Home</a>
-        <a href="#about">About Me</a>
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#certs">Certifications</a>
-        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
@@ -34,84 +32,88 @@
 
 <!-- HERO -->
 <section id="hero" class="glass">
-    <p class="status">● Available for Freelance & Full-Time</p>
-
     <h1>Mahmuda Binte Kabir</h1>
-    <p class="subtitle">CSE Undergrad @ BUP · Cybersecurity Enthusiast</p>
 
-    <div class="cta-buttons">
-        <a href="#contact" class="hire-btn">Hire Me</a>
+    <p class="subtitle">
+        CSE Undergrad @ BUP · Jr. Pentest (Intern) @ Byte Capsule · Offensive Security
+    </p>
+
+    <div class="social-icons">
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://codeforces.com/profile/yourusername" target="_blank"><i class="fas fa-code"></i></a>
     </div>
+
+    <a href="mailto:pentester.mahmuda@gmail.com" class="hire-btn">Hire Me</a>
 </section>
 
-<!-- ABOUT ME -->
+<!-- ABOUT -->
 <section id="about" class="glass">
     <h2>About Me</h2>
 
-    <p class="about-intro">
-        I’m a Computer Science student and <span class="accent">CTF player</span> with strong interest in
-        <span class="accent">Ethical Hacking</span>, <span class="accent">Penetration Testing</span>,
-        secure coding, and offensive security.
-        I enjoy breaking systems responsibly to understand how to defend them better.
+    <p class="about-text">
+        I am a Computer Science student and passionate cybersecurity enthusiast focused on
+        <span class="accent">Ethical Hacking</span>,
+        <span class="accent">Penetration Testing</span>,
+        <span class="accent">Offensive Security</span>,
+        <span class="accent">CTF competitions</span>,
+        and <span class="accent">secure coding</span>.
     </p>
 
-    <div class="about-grid">
+    <div class="keyword-tags">
+        <span>Ethical Hacking</span>
+        <span>Pentesting</span>
+        <span>CTF Player</span>
+        <span>Coding</span>
+        <span>Linux</span>
+        <span>Web Security</span>
+    </div>
 
-        <div class="about-card">
+    <div class="card-grid">
+        <div class="card">
             <h3>Education</h3>
             <p>
-                <strong>BSc in Computer Science & Engineering</strong><br>
+                BSc in Computer Science & Engineering<br>
                 Bangladesh University of Professionals<br>
                 Expected 2027
             </p>
         </div>
 
-        <div class="about-card">
+        <div class="card">
             <h3>Experience</h3>
             <p>
-                <strong>Junior Penetration Tester (Intern)</strong><br>
+                Junior Penetration Tester (Intern)<br>
                 Byte Capsule<br>
                 2026 – Present
             </p>
         </div>
 
-        <div class="about-card">
+        <div class="card">
             <h3>Skills</h3>
             <p>
-                Web Security, Active Directory, Burp Suite, Metasploit, Nmap,<br>
-                Python, Java, C/C++, Linux, Ethical Hacking, CTF Participation
+                Burp Suite, Metasploit, Nmap, Active Directory,<br>
+                Python, Java, C/C++, Linux, Web Security, CTFs
             </p>
         </div>
-
     </div>
 </section>
-
 
 <!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="project-list">
-        <div class="project-card">
-            <h3 onclick="toggleProject(this)">Hand Gesture Controlled Robot</h3>
-            <div class="project-content">
-                <p>
-                    Hand gesture–controlled robot using ADXL345, NRF24L01,
-                    Arduino Nano, and L298N motor driver to translate gestures into real-time movement.
-                </p>
-                <img src="assets/images/gesture-robot.png" alt="Gesture Robot">
-            </div>
+    <div class="card-grid">
+        <div class="card">
+            <img src="assets/images/project1.png">
+            <h3>Gesture Controlled Robot</h3>
+            <p>IoT-based robot controlled using hand gestures.</p>
         </div>
 
-        <div class="project-card">
-            <h3 onclick="toggleProject(this)">Network Cable Optimizer</h3>
-            <div class="project-content">
-                <p>
-                    Java Swing application implementing MST algorithms to optimize cabling cost
-                    with save/load and JSON export.
-                </p>
-                <img src="assets/images/network-optimizer.png" alt="Network Optimizer">
-            </div>
+        <div class="card">
+            <img src="assets/images/project2.png">
+            <h3>Network Optimization Tool</h3>
+            <p>Java-based MST algorithm implementation.</p>
         </div>
     </div>
 </section>
@@ -120,65 +122,38 @@
 <section id="certs">
     <h2>Certifications</h2>
 
-    <div class="cert-grid">
-
-        <div class="cert-card">
-            <img src="assets/images/ehp.png" alt="Ethical Hacking Certificate">
-
+    <div class="card-grid">
+        <div class="card cert-card">
+            <img src="assets/images/cert1.png">
             <h3>Ethical Hacking for Professionals</h3>
             <p>Issuer: Byte Capsule</p>
             <p class="verify-id">Verification ID: BC-EHP-2025-0198</p>
-
-            <div class="cert-actions">
-                <a href="assets/images/ehp.png" target="_blank">View Image</a>
-                <a href="assets/pdfs/ehp.pdf" target="_blank">View PDF</a>
-            </div>
+            <a href="assets/images/cert1.png" target="_blank" class="cert-btn">View Certificate</a>
         </div>
 
-        <div class="cert-card">
-            <img src="assets/images/webpentest.png" alt="Web Pentesting">
-
-            <h3>Web Penetration Testing Essentials</h3>
+        <div class="card cert-card">
+            <img src="assets/images/cert2.png">
+            <h3>Web Penetration Testing</h3>
             <p>Issuer: Byte Capsule</p>
             <p class="verify-id">Verification ID: BC-WPT-2025-0321</p>
-
-            <div class="cert-actions">
-                <a href="assets/images/webpentest.png" target="_blank">View Image</a>
-                <a href="assets/pdfs/webpentest.pdf" target="_blank">View PDF</a>
-            </div>
+            <a href="assets/images/cert2.png" target="_blank" class="cert-btn">View Certificate</a>
         </div>
-
-    </div>
-</section>
-
-
-<!-- RESUME -->
-<section id="resume">
-    <h2>Resume</h2>
-
-    <a class="resume-btn" href="assets/Mahmuda_Binte_Kabir_Resume.pdf" target="_blank">
-        Download Resume (PDF)
-    </a>
-
-    
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="glass">
-    <h2>Get In Touch</h2>
-    <p>Email: <span class="accent">pentester.mahmuda@gmail.com</span></p>
+    <h2>Contact</h2>
+    <p>Email: pentester.mahmuda@gmail.com</p>
     <p>Location: Dhaka, Bangladesh</p>
-    <div class="cta-buttons">
-        <a href="mailto:pentester.mahmuda@gmail.com" class="hire-btn">Hire Me</a>
-    </div>
+
+    <a href="mailto:pentester.mahmuda@gmail.com" class="hire-btn">Hire Me</a>
 </section>
 
 </main>
 
 <footer>
-    <p>System Status: <span class="ok">All Systems Operational</span></p>
-    <p>© 2026 Mahmuda Binte Kabir</p>
+    <p>© 2026 Mahmuda Binte Kabir — Offensive Security</p>
 </footer>
 
 <script src="script.js"></script>
