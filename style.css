@@ -230,27 +230,46 @@ section {
 }
 
 /* CERTIFICATIONS */
-.cert-grid-text {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
+/* CERTIFICATIONS AS CARDS (LIKE CONTACT) */
+#certs .contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.cert-block h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+#certs .contact-card {
+  width: 220px;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  text-align: center;
+  color: var(--text);
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.cert-block p {
-  font-size: 14px;
-  color: var(--muted);
+#certs .contact-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+#certs .contact-card p {
+  font-size: 13px;
   margin-bottom: 6px;
+  color: var(--muted);
 }
 
-.cert-btn {
-  display: inline-block;
-  margin-top: 14px;
+#certs .contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(108,242,255,.15);
+}
+
+#certs .cert-btn {
+  margin-top: 12px;
   padding: 8px 18px;
   border: 1px solid var(--accent);
   border-radius: 10px;
@@ -260,10 +279,11 @@ section {
   transition: .3s ease;
 }
 
-.cert-btn:hover {
+#certs .cert-btn:hover {
   background: var(--accent);
   color: #0b0f14;
 }
+
 
 
 /* CONTACT */
