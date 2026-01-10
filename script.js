@@ -1,27 +1,27 @@
 window.scrollTo(0,0);
 
-// PARTICLES
+/* PARTICLES */
 const canvas = document.getElementById("bgCanvas");
 const ctx = canvas.getContext("2d");
 
 function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
 }
 resize();
-window.addEventListener("resize", resize);
+addEventListener("resize", resize);
 
-let dots = Array.from({length: 90}, () => ({
+const dots = Array.from({length:100}, () => ({
   x: Math.random()*canvas.width,
   y: Math.random()*canvas.height,
   r: Math.random()*2+1,
-  dx: (Math.random()-.5)*.4,
-  dy: (Math.random()-.5)*.4
+  dx:(Math.random()-.5)*.3,
+  dy:(Math.random()-.5)*.3
 }));
 
 function animate() {
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  dots.forEach(d => {
+  dots.forEach(d=>{
     ctx.beginPath();
     ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
     ctx.fillStyle="rgba(108,242,255,.6)";
@@ -34,12 +34,12 @@ function animate() {
 }
 animate();
 
-// PROJECT TOGGLE
+/* PROJECT TOGGLE */
 function toggleProject(card) {
   card.classList.toggle("active");
 }
 
-// SCROLL REVEAL
+/* SCROLL REVEAL */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("visible");
