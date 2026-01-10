@@ -211,22 +211,58 @@ section {
 }
 
 /* PROJECTS */
+/* PROJECT CARDS - DESKTOP / LAPTOP */
 .project-card {
-  margin-top:30px;
-  cursor:pointer;
+  max-width: 500px;         /* limit the card width */
+  width: 100%;              /* allow it to scale */
+  margin: 0 auto 30px;      /* center horizontally and add spacing below */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;   /* stack image + content */
+  align-items: center;      /* center everything inside */
 }
 
+.project-card img {
+  width: 100%;              /* fill card width */
+  max-width: 400px;         /* optional: limit image width */
+  height: auto;             /* keep aspect ratio */
+  border-radius: 16px;      /* match your glass theme */
+  object-fit: cover;        /* prevent distortion */
+  display: block;
+  margin-bottom: 16px;      /* spacing below image */
+}
+
+/* Project content (hidden initially) */
 .project-content {
-  max-height:0;
-  overflow:hidden;
-  opacity:0;
-  transition:.4s;
-  margin-top:16px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  width: 100%;              /* match card width */
 }
 
 .project-card.active .project-content {
-  max-height:600px;
-  opacity:1;
+  max-height: 600px;        /* expanded height */
+  opacity: 1;
+}
+
+/* PROJECT CARDS - MOBILE */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;            /* fill available space */
+    max-width: 300px;       /* smaller cards for mobile */
+    margin: 0 auto 20px;    /* center horizontally */
+  }
+
+  .project-card img {
+    width: 100%;            /* scale image to card width */
+    max-width: 100%;         /* prevent overflow */
+    height: auto;
+  }
+
+  .project-content {
+    max-height: 500px;       /* adjust for mobile */
+  }
 }
 
 /* CERTIFICATIONS */
@@ -411,19 +447,7 @@ html {
     height: 12px;
   }
 
-  /* PROJECTS */
-  /* PROJECTS MOBILE FIX */
-@media (max-width: 768px) {
-  .project-card {
-    width: 100%;           /* take full width of container */
-    max-width: 320px;      /* limit the maximum width */
-    margin: 0 auto 20px;   /* center the card and add spacing below */
-  }
-
-  .project-content {
-    max-height: 500px;     /* adjust expanded content */
-  }
-}
+  
 
 
   /* CERTIFICATIONS */
