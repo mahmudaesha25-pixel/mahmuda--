@@ -12,10 +12,13 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top, #101828, #06080d),
+    linear-gradient(rgba(6,8,13,0.85), rgba(6,8,13,0.9)),
     url("assets/images/pixel.jpg");
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
+
 
 canvas {
   position: fixed;
@@ -55,6 +58,11 @@ main {
   display:flex;
   flex-direction:column;
   gap:140px;
+}
+
+/* FIX ANCHOR OFFSET FOR FIXED NAV */
+section {
+  scroll-margin-top: 130px;
 }
 
 /* HERO */
@@ -222,38 +230,54 @@ main {
 }
 
 /* CERTIFICATIONS */
+/* CERTIFICATIONS */
 .cert-grid {
-  margin-top:40px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
 }
 
 .cert-card {
-  background:var(--glass);
-  border:1px solid var(--border);
-  border-radius:22px;
-  padding:35px;
-  text-align:center;
-  transition:.3s;
+  aspect-ratio: 1 / 1; /* 🔥 makes box shape */
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: .3s ease;
 }
 
 .cert-card:hover {
-  transform:translateY(-8px);
-  box-shadow:0 0 35px rgba(108,242,255,.18);
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(108,242,255,.2);
 }
 
 .cert-icon {
-  font-size:36px;
-  color:var(--accent);
-  margin-bottom:15px;
+  font-size: 38px;
+  color: var(--accent);
+  margin-bottom: 14px;
 }
 
-.cert-card .issuer,
-.cert-card .verify {
-  color:var(--muted);
-  font-size:14px;
+.cert-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
 }
+
+.cert-card .issuer {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.cert-card .verify {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 8px 0 16px;
+}
+
 
 /* CONTACT */
 .contact-section {
@@ -304,6 +328,10 @@ main {
   opacity:1;
   transform:translateY(0);
   transition:.9s ease;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* MOBILE */
