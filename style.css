@@ -423,6 +423,7 @@ html {
   .cert-grid {
     grid-template-columns: 1fr; /* stack cert cards vertically */
     gap: 20px;
+    justify-items: center;
   }
   .cert-card {
     padding: 24px 18px;
