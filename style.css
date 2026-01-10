@@ -354,3 +354,110 @@ html {
   main { padding:140px 6% 100px; }
   #hero h1 { font-size:44px; }
 }
+/* MOBILE STYLES FOR SCREENS <= 768px */
+@media (max-width: 768px) {
+
+  /* MAIN LAYOUT PADDING */
+  main {
+    padding: 140px 6% 100px; /* reduce padding for smaller screens */
+    gap: 80px; /* reduce spacing between sections */
+  }
+
+  /* HERO */
+  #hero h1 {
+    font-size: 44px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .hero-badge {
+    padding: 4px 14px;
+    font-size: 14px;
+  }
+  #hero .contact-icons {
+    font-size: 26px;
+    gap: 24px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ABOUT SECTION */
+  .about-lead {
+    font-size: 18px; /* smaller font */
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 20px;
+  }
+  .tag-row {
+    justify-content: center;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding-left: 20px;
+  }
+  .timeline-item {
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* PROJECTS */
+  .project-card {
+    margin-top: 20px;
+  }
+  .project-content {
+    max-height: 500px;
+  }
+
+  /* CERTIFICATIONS */
+  .cert-grid {
+    grid-template-columns: 1fr; /* stack cert cards vertically */
+    gap: 20px;
+  }
+  .cert-card {
+    padding: 24px 18px;
+  }
+  .cert-card i {
+    font-size: 28px;
+  }
+
+  /* CONTACT */
+  .contact-lead {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .contact-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* NAVIGATION */
+  .top-nav {
+    padding: 15px 6%;
+  }
+  .top-nav a {
+    margin-left: 14px;
+    font-size: 14px;
+  }
+
+  /* BUTTONS */
+  .primary-btn, .ghost-btn, .cert-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
