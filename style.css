@@ -230,35 +230,44 @@ section {
 }
 
 /* CERTIFICATIONS */
+/* CERTIFICATIONS – COMPACT FIX */
 .cert-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:25px;
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
 }
 
 .cert-card {
-  padding:22px;
-  text-align:center;
-  border-radius:18px;
-  background:var(--glass);
-  border:1px solid var(--border);
-  transition:.3s;
+  padding: 20px 18px;
+  border-radius: 16px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: .3s ease;
 }
 
 .cert-card:hover {
-  transform:translateY(-8px);
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(108,242,255,.18);
 }
 
 .cert-icon {
-  font-size:28px;
-  margin-bottom:10px;
-  color:var(--accent);
+  font-size: 26px;
+  color: var(--accent);
+  margin-bottom: 10px;
 }
 
-.issuer {
-  font-size:13px;
-  color:var(--muted);
+.cert-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
 }
+
+.cert-card .issuer {
+  font-size: 13px;
+  color: var(--muted);
+}
+
 
 /* CONTACT */
 .contact-section {
