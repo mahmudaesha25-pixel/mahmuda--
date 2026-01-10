@@ -412,12 +412,19 @@ html {
   }
 
   /* PROJECTS */
+  /* PROJECTS MOBILE FIX */
+@media (max-width: 768px) {
   .project-card {
-    margin-top: 20px;
+    width: 100%;           /* take full width of container */
+    max-width: 320px;      /* limit the maximum width */
+    margin: 0 auto 20px;   /* center the card and add spacing below */
   }
+
   .project-content {
-    max-height: 500px;
+    max-height: 500px;     /* adjust expanded content */
   }
+}
+
 
   /* CERTIFICATIONS */
   .cert-grid {
