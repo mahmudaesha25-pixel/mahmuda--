@@ -230,42 +230,39 @@ section {
 }
 
 /* CERTIFICATIONS */
-/* CERTIFICATIONS – COMPACT FIX */
-.cert-grid {
-  margin-top: 35px;
+.cert-grid-text {
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
 }
 
-.cert-card {
-  padding: 20px 18px;
-  border-radius: 16px;
-  background: var(--glass);
-  border: 1px solid var(--border);
-  text-align: center;
-  transition: .3s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(108,242,255,.18);
-}
-
-.cert-icon {
-  font-size: 26px;
-  color: var(--accent);
+.cert-block h3 {
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.cert-card h3 {
-  font-size: 16px;
-  margin-bottom: 4px;
+.cert-block p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
 }
 
-.cert-card .issuer {
+.cert-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  color: var(--accent);
+  text-decoration: none;
   font-size: 13px;
-  color: var(--muted);
+  transition: .3s ease;
+}
+
+.cert-btn:hover {
+  background: var(--accent);
+  color: #0b0f14;
 }
 
 
