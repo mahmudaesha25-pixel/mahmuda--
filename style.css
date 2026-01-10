@@ -230,58 +230,66 @@ section {
 }
 
 /* CERTIFICATIONS */
-/* CERTIFICATIONS AS CARDS (LIKE CONTACT) */
-#certs .contact-cards {
-  display: flex;
-  justify-content: center;
+/* CERTIFICATIONS – CLEAN CARD DESIGN */
+.cert-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
-  flex-wrap: wrap;
 }
 
-#certs .contact-card {
-  width: 220px;
-  padding: 30px;
-  border-radius: 20px;
+.cert-card {
   background: var(--glass);
   border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 32px 26px;
   text-align: center;
-  color: var(--text);
-  transition: .3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  transition: .35s ease;
+  position: relative;
 }
 
-#certs .contact-card h3 {
-  font-size: 16px;
+.cert-card i {
+  font-size: 34px;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.cert-card h3 {
+  font-size: 17px;
   margin-bottom: 8px;
 }
 
-#certs .contact-card p {
-  font-size: 13px;
-  margin-bottom: 6px;
+.cert-card .issuer {
+  font-size: 14px;
   color: var(--muted);
+  margin-bottom: 6px;
 }
 
-#certs .contact-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(108,242,255,.15);
+.cert-card .verify {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
 }
 
-#certs .cert-btn {
-  margin-top: 12px;
-  padding: 8px 18px;
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(108,242,255,.18);
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 12px;
   border: 1px solid var(--accent);
-  border-radius: 10px;
   color: var(--accent);
   text-decoration: none;
   font-size: 13px;
-  transition: .3s ease;
+  transition: .3s;
 }
 
-#certs .cert-btn:hover {
+.cert-btn:hover {
   background: var(--accent);
-  color: #0b0f14;
+  color: #000;
 }
 
 
