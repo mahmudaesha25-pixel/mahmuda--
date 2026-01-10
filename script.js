@@ -1,52 +1,49 @@
-// Always start from top
-window.onload = () => {
-    window.scrollTo(0, 0);
-};
+window.scrollTo(0,0);
 
-// Canvas particles
+// PARTICLES
 const canvas = document.getElementById("bgCanvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let dots = [];
-
-for (let i = 0; i < 80; i++) {
-    dots.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 2 + 1,
-        dx: (Math.random() - 0.5) * 0.5,
-        dy: (Math.random() - 0.5) * 0.5
-    });
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
+resize();
+window.addEventListener("resize", resize);
+
+let dots = Array.from({length: 90}, () => ({
+  x: Math.random()*canvas.width,
+  y: Math.random()*canvas.height,
+  r: Math.random()*2+1,
+  dx: (Math.random()-.5)*.4,
+  dy: (Math.random()-.5)*.4
+}));
 
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    dots.forEach(d => {
-        ctx.beginPath();
-        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(0,255,170,0.6)";
-        ctx.fill();
-
-        d.x += d.dx;
-        d.y += d.dy;
-
-        if (d.x < 0 || d.x > canvas.width) d.dx *= -1;
-        if (d.y < 0 || d.y > canvas.height) d.dy *= -1;
-    });
-
-    requestAnimationFrame(animate);
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  dots.forEach(d => {
+    ctx.beginPath();
+    ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+    ctx.fillStyle="rgba(108,242,255,.6)";
+    ctx.fill();
+    d.x+=d.dx; d.y+=d.dy;
+    if(d.x<0||d.x>canvas.width) d.dx*=-1;
+    if(d.y<0||d.y>canvas.height) d.dy*=-1;
+  });
+  requestAnimationFrame(animate);
 }
-
 animate();
 
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
+// PROJECT TOGGLE
 function toggleProject(card) {
-    card.classList.toggle("active");
+  card.classList.toggle("active");
 }
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("visible");
+  });
+},{threshold:.15});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
