@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mahmuda | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Mahmuda Binte Kabir | Cybersecurity Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -22,8 +22,9 @@
   <div class="nav-links">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
-    <a href="#certs">Certifications</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -31,128 +32,172 @@
 <main>
 
 <!-- HERO -->
-<section id="hero" class="section">
+<section id="hero">
+  <span class="hero-badge">Cybersecurity • Offensive Security</span>
+
   <h1>Mahmuda Binte Kabir</h1>
-  <p class="subtitle">
-    CSE Undergrad · Jr. Pentester (Intern) · Offensive Security
+
+  <p class="hero-subtitle">
+    CSE Undergraduate · Junior Pentester Intern · CTF Player
   </p>
 
-  <div class="hero-icons">
+  <div class="contact-icons">
     <a href="https://github.com/mahmuda-binte-kabir" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://www.linkedin.com/in/mahmuda-binte-kabir" target="_blank"><i class="fab fa-linkedin"></i></a>
     <a href="https://twitter.com/Mahmuda_BK" target="_blank"><i class="fab fa-x-twitter"></i></a>
     <a href="https://codeforces.com/profile/_MBK_" target="_blank"><i class="fas fa-code"></i></a>
   </div>
 
-  <a href="assets/Mahmuda_Binte_Kabir_Resume.pdf" target="_blank" class="resume-btn">
-    📄 View Resume
-  </a>
+  <div class="hero-actions">
+    <a class="primary-btn" href="assets/Mahmuda_Binte_Kabir_Resume.pdf" target="_blank">View Resume</a>
+    <a class="ghost-btn" href="#contact">Contact Me</a>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section reveal">
-  <div class="section-card">
-    <h2>About Me</h2>
+<section id="about" class="section-card reveal">
+  <h2>About Me</h2>
 
-    <p class="about-text">
-      Cybersecurity-focused CSE undergraduate with a strong interest in
-      ethical hacking, penetration testing, CTF competitions, and secure coding.
-    </p>
+  <p class="about-lead">
+    Cybersecurity-focused Computer Science undergraduate with strong interest
+    in offensive security and real-world exploitation.
+  </p>
 
-    <div class="about-grid">
+  <div class="about-grid">
+    <div>
+      <h3>What I Do</h3>
+      <p>Web & Active Directory Pentesting, CTF challenges</p>
+    </div>
+    <div>
+      <h3>Tools</h3>
+      <p>Burp Suite, Metasploit, Nmap, Linux, Python</p>
+    </div>
+    <div>
+      <h3>Mindset</h3>
+      <p>Hands-on labs, learning by breaking systems</p>
+    </div>
+  </div>
+
+  <div class="tag-row">
+    <span>Offensive Security</span>
+    <span>Ethical Hacking</span>
+    <span>CTF Player</span>
+    <span>Linux</span>
+    <span>Python</span>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section-card reveal">
+  <h2>Education</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
       <div>
-        <h3>School</h3>
-        <p>Ideal School & College</p>
-      </div>
-
-      <div>
-        <h3>College</h3>
-        <p>Govt. Science College</p>
-      </div>
-
-      <div>
-        <h3>University</h3>
-        <p>Bangladesh University of Professionals</p>
+        <h3>BSc in Computer Science & Engineering</h3>
+        <p>Bangladesh University of Professionals (BUP)</p>
+        <small>2023 – 2027 (Expected)</small>
       </div>
     </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <div>
+        <h3>Higher Secondary Certificate (Science)</h3>
+        <p>College Name</p>
+        <small>2020 – 2022</small>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="timeline-dot"></span>
+      <div>
+        <h3>Secondary School Certificate (Science)</h3>
+        <p>School Name</p>
+        <small>2018 – 2020</small>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section reveal">
-  <div class="section-card">
-    <h2>Projects</h2>
+<section id="projects" class="section-card reveal">
+  <h2>Projects</h2>
 
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Hand Gesture Controlled Robot</h3>
-        <p>
-          Arduino-based gesture-controlled robot using ADXL345,
-          NRF24L01, and L298N motor driver.
-        </p>
-      </div>
+  <div class="project-card" onclick="toggleProject(this)">
+    <h3>Hand Gesture Controlled Robot</h3>
+    <div class="project-content">
+      <p>
+        Arduino-based robotic system using accelerometer and RF modules
+        to translate hand gestures into real-time robotic motion.
+      </p>
+      <img src="assets/images/gesture-robot.png" alt="Gesture Robot">
+    </div>
+  </div>
 
-      <div class="project-card">
-        <h3>Network Cable Optimizer</h3>
-        <p>
-          Java Swing application implementing Minimum Spanning Tree (MST)
-          to reduce cabling cost.
-        </p>
-      </div>
+  <div class="project-card" onclick="toggleProject(this)">
+    <h3>Network Cable Optimizer</h3>
+    <div class="project-content">
+      <p>
+        Java Swing application implementing Minimum Spanning Tree algorithms
+        to minimize network cabling cost.
+      </p>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certs" class="section reveal">
-  <div class="section-card">
-    <h2>Certifications</h2>
+<section id="certifications" class="section-card reveal">
+  <h2>Certifications</h2>
 
-    <div class="cert-grid">
-      <div class="cert-card reveal">
-        <i class="fas fa-shield-alt cert-icon"></i>
-        <h3>Ethical Hacking</h3>
-        <p class="issuer">Byte Capsule</p>
-      </div>
+  <div class="cert-grid">
 
-      <div class="cert-card reveal">
-        <i class="fas fa-lock cert-icon"></i>
-        <h3>Web Security</h3>
-        <p class="issuer">Byte Capsule</p>
+    <div class="cert-card">
+      <div class="cert-icon">
+        <i class="fas fa-shield-halved"></i>
       </div>
-
-      <div class="cert-card reveal">
-        <i class="fas fa-bug cert-icon"></i>
-        <h3>CTF Practice</h3>
-        <p class="issuer">Self Practice</p>
-      </div>
+      <h3>Ethical Hacking for Professionals</h3>
+      <p class="issuer">Byte Capsule</p>
+      <p class="verify">ID: BC-EHP-2025-0198</p>
+      <a href="assets/images/ehp.png" target="_blank" class="ghost-btn">
+        View Certificate
+      </a>
     </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section reveal contact-section">
-  <div class="section-card">
-    <h2>Contact</h2>
-    <p class="contact-lead">Let’s build or break things securely.</p>
+<section id="contact" class="contact-section reveal">
+  <h2>Let’s Connect</h2>
 
-    <div class="contact-cards">
-      <a class="contact-card" href="https://www.linkedin.com/in/mahmuda-binte-kabir" target="_blank">
-        <i class="fab fa-linkedin"></i>
-        LinkedIn
-      </a>
+  <p class="contact-lead">
+    Open to internships, collaborations, and cybersecurity discussions.
+  </p>
 
-      <a class="contact-card" href="https://twitter.com/Mahmuda_BK" target="_blank">
-        <i class="fab fa-x-twitter"></i>
-        X / Twitter
-      </a>
+  <div class="contact-cards">
 
-      <a class="contact-card" href="mailto:pentester.mahmuda@gmail.com">
-        <i class="fas fa-envelope"></i>
-        Email
-      </a>
-    </div>
+    <a href="mailto:pentester.mahmuda@gmail.com" class="contact-card">
+      <i class="fas fa-envelope"></i>
+      <span>Email</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/mahmuda-binte-kabir" target="_blank" class="contact-card">
+      <i class="fab fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+
+    <a href="https://twitter.com/Mahmuda_BK" target="_blank" class="contact-card">
+      <i class="fab fa-x-twitter"></i>
+      <span>X (Twitter)</span>
+    </a>
+
   </div>
+
+  <p class="contact-location">📍 Dhaka, Bangladesh</p>
 </section>
 
 </main>
